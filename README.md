@@ -21,6 +21,6 @@ $ rasa run --enable-api --model ./models --endpoints ./endpoints.yml --cors "*"
 ```
 
 ## Additional Resources
-[Rasa Documentation]{https://rasa.com/docs/}
-[Rasa Learning Center]{https://learning.rasa.com/}
-[Rasa YouTube Channe]{https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          
+[Rasa Documentation](https://rasa.com/docs/)
+[Rasa Learning Center](https://learning.rasa.com/)
+[Rasa YouTube Channe](https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          )
