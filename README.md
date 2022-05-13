@@ -6,11 +6,12 @@ Here are the files for creating the chatbot model.
 
 ```
 $ python3 -m venv ./venv
-$ pip3 install -U pip
+$ source ./venv/bin/activate
+(venv)$ pip3 install -U pip
 
-$ pip3 install rasa
+(venv)$ pip3 install rasa
 
-$ rasa init
+(venv)$ rasa init
 ```
 
 ## Starting Rasa server
