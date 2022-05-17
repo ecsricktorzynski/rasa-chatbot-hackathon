@@ -11,6 +11,11 @@ $ source ./venv/bin/activate
 
 (venv)$ pip3 install rasa
 
+
+# Add neo4j connectivity
+(venv)$ pip3 install py2neo
+(venv)$ pip3 install neomodel
+
 (venv)$ rasa init
 ```
 
