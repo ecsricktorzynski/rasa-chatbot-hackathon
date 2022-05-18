@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: add to neo4j db
+  steps:
+  - intent: neo4j_add
+  - action: action_neo4j_example

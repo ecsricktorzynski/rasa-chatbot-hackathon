@@ -8,6 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - neo4j_add
+
+actions: 
+  - action_neo4j_example
 
 responses:
   utter_greet:

@@ -89,3 +89,9 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: neo4j_add
+  examples: |
+    - add entry to neo4j
+    - save to neo4j
+    - enter message in neo4j
