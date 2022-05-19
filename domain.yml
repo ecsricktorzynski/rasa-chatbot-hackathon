@@ -33,6 +33,12 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_confirmation_neo4j_add:
+  - text: "Do you want to create new neo4j node?"
+
+  utter_something_else:
+  - text: "Is there something else I can help you with?"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

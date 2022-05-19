@@ -32,4 +32,23 @@ stories:
 - story: add to neo4j db
   steps:
   - intent: neo4j_add
+  - action: utter_confirmation_neo4j_add
+  - checkpoint: check_asked_question
+
+- story: handle neo4j confirmation
+  steps:
+  - checkpoint: check_asked_question
+  - intent: affirm
   - action: action_neo4j_example
+  - checkpoint: check_flow_finished
+
+- story: handle neo4j denial
+  steps:
+  - checkpoint: check_asked_question
+  - intent: deny
+  - checkpoint: check_flow_finished
+
+- story: finish flow
+  steps:
+  - checkpoint: check_flow_finished
+  - action: utter_something_else
