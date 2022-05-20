@@ -28,7 +28,7 @@ $ rasa run --enable-api --model ./models --endpoints ./endpoints.yml --cors "*"
 If custom actions are being used, then a separate rasa action server has to be started to handle actions.
 
 ```
-open separate terminal
+# open separate terminal
 $ source ./venv/bin/activate
 $ rasa run actions
 ```
