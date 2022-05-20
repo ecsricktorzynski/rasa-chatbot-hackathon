@@ -5,6 +5,9 @@ Here are the files for creating the chatbot model.
 [Rasa open source installation instructions](https://rasa.com/docs/rasa/installation/)
 
 ```
+$ git clone https://github.com/ecsricktorzynski/rasa-chatbot-hackathon
+$ cd rasa-chatbot-hackathon
+
 $ python3 -m venv ./venv
 $ source ./venv/bin/activate
 (venv)$ pip3 install -U pip
@@ -12,10 +15,12 @@ $ source ./venv/bin/activate
 (venv)$ pip3 install rasa
 
 # Add neo4j connectivity
-(venv)$ pip3 install py2neo
-(venv)$ pip3 install neomodel
+(venv)$ pip3 install neo4j
 
+# don't train an initial module
 (venv)$ rasa init
+
+(venv)$ git restore config.yml
 ```
 
 ## Starting Rasa server
@@ -37,5 +42,6 @@ $ rasa run actions
 [Rasa Documentation](https://rasa.com/docs/)
 
 [Rasa Learning Center](https://learning.rasa.com/)
+This is documentation for developers providing good explanations of NLP and explaining Transformers in a relatively simple way.
 
 [Rasa YouTube Channe](https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          )
