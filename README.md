@@ -38,6 +38,28 @@ $ source ./venv/bin/activate
 $ rasa run actions
 ```
 
+## Rasa Commands
+```
+# to create new chatbot
+(venv)$ rasa init
+
+# train chatbot after changes
+(venv)$ rasa train
+
+# run chatbot in shell
+(venv)$ rasa shell
+
+# run chatbot as a service
+(venv)$ rasa run --enable-api --model ./models --endpoints ./endpoints.yml --cors "*"
+
+# show help
+(venv)$ rasa -h
+
+# show extra log output when debugging
+(venv)$ rasa --debug
+
+```
+
 ## Additional Resources
 [Rasa Documentation](https://rasa.com/docs/)
 
