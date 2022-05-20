@@ -60,6 +60,10 @@ $ rasa run actions
 
 ```
 
+## Rasa File Structure
+
+![Rasa File Structure](Rasa_Filestructure.png)
+
 ## Additional Resources
 [Rasa Documentation](https://rasa.com/docs/)
 
