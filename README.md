@@ -24,6 +24,15 @@ $ source ./venv/bin/activate
 $ rasa run --enable-api --model ./models --endpoints ./endpoints.yml --cors "*"
 ```
 
+## Starting Rasa Action server
+If custom actions are being used, then a separate rasa action server has to be started to handle actions.
+
+'''
+open separate terminal
+$ source ./venv/bin/activate
+$ rasa run actions
+'''
+
 ## Additional Resources
 [Rasa Documentation](https://rasa.com/docs/)
 
