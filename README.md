@@ -62,7 +62,16 @@ $ rasa run actions
 
 ## Rasa File Structure
 
-![Rasa File Structure](Rasa_Filestructure.png)
+![Rasa File Structure](images/Rasa_Filestructure.png)
+
+## Rasa Architecture
+
+![Rasa Architecture](images/rasa_architecture_medium.png)
+
+## Rasa DIET
+Rasa's Dual Intent Entity Transformer (DIET) technology is used for entity extraction and intent recognition.
+
+![Rasa DIET](images/DIET_classifier_med.png)
 
 ## Additional Resources
 [Rasa Documentation](https://rasa.com/docs/)
