@@ -68,10 +68,18 @@ $ rasa run actions
 
 ![Rasa Architecture](images/rasa_architecture_medium.png)
 
+## Rasa NLU
+
+![Rasa NLU](images/RasaNLU.png)
+
 ## Rasa DIET
 Rasa's Dual Intent Entity Transformer (DIET) technology is used for entity extraction and intent recognition.
 
 ![Rasa DIET](images/DIET_classifier_med.png)
+
+## Rasa Dialogue Manager (DM)
+
+![Rasa Dialogue Manager](images/RasaDialogueManager.png)
 
 ## Additional Resources
 [Rasa Documentation](https://rasa.com/docs/)
