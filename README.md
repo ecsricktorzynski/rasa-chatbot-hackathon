@@ -89,3 +89,19 @@ Rasa's Dual Intent Entity Transformer (DIET) technology is used for entity extra
 This is documentation for developers providing good explanations of NLP and explaining Transformers in a relatively simple way.
 
 [Rasa YouTube Channe](https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          )
+
+# Tasks for Hackathon
+
+1. Install Rasa
+2. Train Rasa model
+3. Use Rasa shell to talk to chatbot
+4. Add Intents and Entities
+5. Use Flask for web interface
+6. Add a Form 
+7. Add a Form with text slots
+8. Add a custom action to get current time
+9. Add a custom action to access Neo4j
+10. Add a custom action with confirmation
+11. Add hackathon custom actions
+
+
