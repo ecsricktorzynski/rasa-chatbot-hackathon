@@ -88,7 +88,7 @@ Rasa's Dual Intent Entity Transformer (DIET) technology is used for entity extra
 
 This is documentation for developers providing good explanations of NLP and explaining Transformers in a relatively simple way.
 
-[Rasa YouTube Channe](https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          )
+[Rasa YouTube Channel](https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ                                                                                          )
 
 # Tasks for Hackathon
 
