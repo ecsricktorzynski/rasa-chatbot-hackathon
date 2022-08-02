@@ -104,4 +104,7 @@ This is documentation for developers providing good explanations of NLP and expl
 10. Add a custom action with confirmation
 11. Add hackathon custom actions
 
+If you have any questions, contact Rick Torzynski
+
+
 
