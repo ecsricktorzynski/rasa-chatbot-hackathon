@@ -27,6 +27,9 @@ $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
 $ docker run -u 1000:1000 -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
 ```
 
+The -v option maps the current directory to the /app directory inside the Rasa
+Docker container.  So to make changes, just change the files in this directory.
+
 ## Installation Instructions for Linux or WSL2 (Ubuntu on Windows using Windows Subsystem for Linux)
 [Rasa open source installation instructions](https://rasa.com/docs/rasa/installation/)
 
