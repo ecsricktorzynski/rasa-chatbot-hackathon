@@ -1,7 +1,33 @@
 # Rasa Chatbot Hackathon
 Here are the files for creating the chatbot model.  
 
-## Installation Instructions
+## Using Docker for Rasa
+[Building a Rasa Assistant in Docker](https://rasa.com/docs/rasa/docker/building-in-docker/)
+
+```
+$ docker -v
+
+$ cd ~/Docker
+
+$ mkdir rasa
+
+$ cd rasa
+
+Note:
+# add the -u 1000:1000 to run the docker container as default username
+# to get uid: cat /etc/group
+
+# This command will get the docker container rasa/rasa and setup initial project
+$ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
+
+# Train your model
+$ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
+
+# talk to bot using shell command
+$ docker run -u 1000:1000 -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+```
+
+## Installation Instructions for Linux or WSL2 (Ubuntu on Windows using Windows Subsystem for Linux)
 [Rasa open source installation instructions](https://rasa.com/docs/rasa/installation/)
 
 ```
