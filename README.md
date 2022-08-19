@@ -24,7 +24,7 @@ $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
 $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
 
 # talk to bot using shell command
-$ docker run -u 1000:1000 -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+$ docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
 
 # create a network
 $ docker network create my-project
