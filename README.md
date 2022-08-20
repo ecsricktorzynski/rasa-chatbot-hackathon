@@ -60,7 +60,27 @@ $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
 $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
 
 # talk to bot using shell command
-$ docker run -u 1000:1000 -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+$ docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+
+# create a network
+$ docker network create my-project
+
+# stop the action server
+$ docker stop action-server
+
+# list running docker containers
+$ docker ps
+
+# list local docker images
+$ docker images
+
+# remove local docker image
+$ docker rm image image-to-remove
+
+# stop docker container
+$ docker stop [container-id]
+$ docker stop [container-name]
+
 ```
 
 The -v option maps the current directory to the /app directory inside the Rasa
