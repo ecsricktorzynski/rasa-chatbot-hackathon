@@ -7,13 +7,49 @@ Here are the files for creating the chatbot model.
 ```
 $ docker -v
 
+$ mkdir Docker
+
 $ cd ~/Docker
 
 $ mkdir rasa
 
 $ cd rasa
 
-Note:
+## ECS computer and using Docker Desktop and Gitbash
+
+In order to get Rasa Docker working, you need a number of additional values
+
+# to get userid
+$ id -u Firstname.Lastname
+
+# to get groupid
+$ id -g Firstname.Lastname
+
+# to get the current directory where you are installing Rasa docker to
+# format should be "c/Users/Firstname.Lastname/dockerdirectory"
+# if there are spaces in the path, make sure to use quotation marks
+$ pwd
+
+# To setup Rasa for the first time
+$ docker run --mount src="/c/Users/Firstname.Lastname/pathtorasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
+
+# So for me where I created a directory 
+docker run --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
+
+If you get a error message about permissions, try adding -u userid:groupid to the above command.
+$ docker run -u 1089705:1049089 --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
+
+# To train Rasa 
+$ docker run -u 1089705:1049089 --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind rasa/rasa:3.2.6-full train
+
+# To use Rasa Shell
+# Make sure to add winpty before the command or you'll get an error
+$ winpty docker run -u 1089705:1049089 -it --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+
+### The following works on Windows, but running WSL2 Ubuntu
+I'm a big fan of WSL2 as it allows me to work both on Windows and Ubuntu and
+communicate easily between the two
+
 # add the -u 1000:1000 to run the docker container as default username
 # to get uid: cat /etc/group
 
@@ -28,9 +64,10 @@ $ docker run -u 1000:1000 -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/
 ```
 
 The -v option maps the current directory to the /app directory inside the Rasa
-Docker container.  So to make changes, just change the files in this directory.
+Docker container.  This is just a simplier command to --mount that has to be used on Windows. So to make changes, just change the files in this directory.
 
 ## Installation Instructions for Linux or WSL2 (Ubuntu on Windows using Windows Subsystem for Linux)
+
 [Rasa open source installation instructions](https://rasa.com/docs/rasa/installation/)
 
 ```
