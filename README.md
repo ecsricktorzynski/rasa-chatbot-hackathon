@@ -66,37 +66,54 @@ $ winpty docker run -u 1089705:1049089 -it --mount src="/c/Users/Richard.Torzyns
 I'm a big fan of WSL2 as it allows me to work both on Windows and Ubuntu and
 communicate easily between the two
 
-# add the -u 1000:1000 to run the docker container as default username
-# to get uid: cat /etc/group
+add the -u 1000:1000 to run the docker container as default username
+to get uid: cat /etc/group
 
-# This command will get the docker container rasa/rasa and setup initial project
+This command will get the docker container rasa/rasa and setup initial project
+```
 $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
+```
 
-# Train your model
+Train your model
+```
 $ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
+```
 
-# talk to bot using shell command
-$ docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
-
-# create a network
+Create a network (we will use this later on but needed for shell)
 $ docker network create my-project
 
-# stop the action server
+Talk to bot using shell command
+```
+$ docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+```
+
+
+## Docker commands
+
+Stop the action server
+```
 $ docker stop action-server
+```
 
-# list running docker containers
+List running docker containers
+```
 $ docker ps
+```
 
-# list local docker images
+List local docker images
+```
 $ docker images
+```
 
-# remove local docker image
+Remove local docker image
+```
 $ docker rm image image-to-remove
+```
 
-# stop docker container
+Stop docker container
+```
 $ docker stop [container-id]
 $ docker stop [container-name]
-
 ```
 
 The -v option maps the current directory to the /app directory inside the Rasa
