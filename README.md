@@ -109,8 +109,8 @@ git remote -v
 ```
 
 Create a docker branch
-git checkout -b dockerls -la
+git checkout -b docker
 
 
-Create a main branchgcd
+Create a main branch
 git checkout -b main
