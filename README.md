@@ -44,11 +44,6 @@ To setup Rasa for the first time
 docker run -u 1089705:1049089 --mount src="/c/Users/Firstname.Lastname/pathtorasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
 ```
 
-If you get a error message about permissions, try adding -u userid:groupid to the above command.
-```
-docker run -u 1089705:1049089 --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
-```
-
 To train Rasa 
 ```
 docker run -u 1089705:1049089 --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind rasa/rasa:3.2.6-full train --domain domain.yml --data data --out models
