@@ -3,3 +3,6 @@
 actions/__pycache__/*
 venv/*
 models/*
+.config/*
+.keras/*
+
