@@ -56,7 +56,7 @@ docker network create my-project
 
 To use Rasa Shell, make sure to add winpty before the command or you'll get an error
 ```
-$ winpty docker run -u 1089705:1049089 -it --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shellgit 
+$ winpty docker run -u 1089705:1049089 -it --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
 ```
 
 To use custom actions, need to start the Rasa Action Server
