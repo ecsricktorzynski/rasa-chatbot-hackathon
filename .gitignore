@@ -1,0 +1,5 @@
+# ignore all files except the YAML files to build the model
+.rasa/*
+actions/__pycache__/*
+venv/*
+models/*
