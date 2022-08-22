@@ -61,7 +61,7 @@ $ winpty docker run -u 1089705:1049089 -it --mount src="/c/Users/Richard.Torzyns
 
 To use custom actions, need to start the Rasa Action Server
 ```
-docker run -u 1089705:1049089 -d --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app/actions,type=bind --net my-project --name action-server rasa/rasa-sdk:3.2.0
+docker run -u 1089705:1049089 -d --mount src="/c/Users/Richard.Torzynski/Docker/rasa/actions/",dst=/app/actions,type=bind --net my-project --name action-server rasa/rasa-sdk:3.2.0
 ```
 ## Docker commands
 
