@@ -8,6 +8,18 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - define
+  - creator
+  - creation
+  - release_7
+  - release_8
+  - release_9
+  - release_10
+  - end_of_life_7
+  - end_of_life_8
+
+entities:
+  - release
 
 responses:
   utter_greet:
@@ -28,6 +40,35 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_creator:
+  - text: "Drupal was originally written by Dries Buytaert as a message board"
+  - text: "Dries Buytaert created Drupal as a message board."
+
+  utter_creation:
+  - text: "Drupal became an open source project in 2001."
+
+  utter_define:
+  - text: "Drupal is the open source content management framework behind millions of websites and applications. It powers many of the web’s most influential platforms. It has long been how companies and organizations—large and small—keep up with the demands of managing their content operations."
+
+  utter_release_7:
+  - text: "Drupal 7 was released on January 5, 2011"
+
+  utter_release_8:
+  - text: "Drupal 8 was released on November 19, 2015"
+
+  utter_release_9:
+  - text: "Drupal 9 was released on June 3, 2020"
+
+  utter_release_10:
+  - text: "Drupal 10 will be released on June or December 2022"
+
+  utter_end_of_life_7:
+  - text: "Drupal 7's end-of-life was scheduled for November 2021, but the end of life has been pushed back until November 28, 2022."
+  - text: "Drupal 7's end-of-life is November 28, 2022"
+
+  utter_end_of_life_8:
+  - text: "Drupal 8 reached end of life November 30, 2021"
 
 actions:
   - action_joke

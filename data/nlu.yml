@@ -89,3 +89,108 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: define
+  examples: |
+    - what is drupal?
+    - tell me about drupal?
+    - define drupal
+
+- intent: creator
+  examples: |
+    - who created drupal?
+    - who programmed drupal?
+    - who wrote drupal?
+
+- intent: creation
+  examples: |
+    - when was drupal created?
+    - what year did drupal come out?
+
+- intent: release_7
+  examples: |
+    - when was [drupal7]{"entity": "release"} release released?
+    - what was [drupal7]{"entity": "release"} release date?
+    - when did [drupal7]{"entity": "release"} get released?
+    - [drupal7]{"entity": "release"} released?
+
+- intent: release_8
+  examples: |
+    - when was [drupal8]{"entity": "release"} released?
+    - what was [drupal8]{"entity": "release"} release date?
+    - when did [drupal8]{"entity": "release"} get released?
+    - when did [drupal8]{"entity": "release"} get released?
+
+- intent: release_9
+  examples: |
+    - when was [drupal9]{"entity": "release"} released?
+    - what was [drupal9]{"entity": "release"} release date?
+    - when did [drupal9]{"entity": "release"} get released?
+    - when was [drupal9]{"entity": "release"} released?
+
+
+- intent: release_10
+  examples: |
+    - when will [drupal10]{"entity": "release"} be released?
+    - what is [drupal10]{"entity": "release"} release date?
+    - when did [drupal10]{"entity": "release"} get released?
+    - when was [drupal10]{"entity": "release"} reeleased?
+    - what was [drupal10] release date?
+
+- intent: end_of_life_7
+  examples: |
+    - what is [drupal7]{"entity": "release"} end of life?
+    - when does [drupal7]{"entity": "release"} become unsupported?
+    - when does [drupal7]{"entity": "release"} reach end of life?
+    - when is the end of life for [drupal7]{"entity": "release"}
+
+- intent: end_of_life_8
+  examples: |
+    - what is [drupal8]{"entity": "release"} end of life?
+    - when does [drupal8]{"entity": "release"} become unsupported?
+    - when does [drupal8]{"entity": "release"} reach end of life?
+    - when is the end of life for [drupal8]{"entity": "release"}
+
+- lookup: module
+  examples: |
+    - component
+    - paragraphs
+    - pathauto
+    - migrate
+    - json:api
+
+- synonym: drupal7
+  examples: |
+    - d7
+    - drupal 7
+
+- synonym: drupal8
+  examples: |
+    - d8
+    - drupal 8
+
+- synonym: drupal9
+  examples: |
+    - d9
+    - drupal 9
+
+- synonym: drupal10
+  examples: |
+    - d10
+    - drupal 10
+
+- regex: drupal7
+  examples: |
+    - drupal[ ]{0,1}7
+
+- regex: drupal8
+  examples: |
+    - drupal[ ]{0,1}8
+
+- regex: drupal9
+  examples: |
+    - drupal[ ]{0,1}9
+
+- regex: drupal10
+  examples: |
+    - drupal[ ]{0,1}10
