@@ -128,24 +128,32 @@ to get uid: cat /etc/group
 
 This command will get the docker container rasa/rasa and setup initial project
 ```
-$ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
+docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full init --no-prompt
 ```
 
 Train your model
 ```
-$ docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
+docker run -u 1000:1000 -v $(pwd):/app rasa/rasa:3.2.6-full train
 ```
 
 Create a network (we will use this later on but needed for shell)
-$ docker network create my-project
+docker network create my-project
 
 Talk to bot using shell command
 ```
-$ docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
+docker run -u 1000:1000 -it -v "$(pwd)":/app -p 5005:5005 --net my-project rasa/rasa:3.2.6-full shell
 ```
 
+Create action server for custom actions
+```
+docker run -d -v $(pwd)/actions:/app/actions --net my-project --name action-server rasa/rasa-sdk:3.2.0
+```
 
 ## Docker commands
+Start the action server (if you used docker stop action-server)
+```
+docker start action-server
+```
 
 Stop the action server
 ```
