@@ -153,6 +153,12 @@ Create action server for custom actions
 docker run -d -v $(pwd)/actions:/app/actions --net my-project --name action-server rasa/rasa-sdk:3.2.0
 ```
 
+Run Rasa as API for web-chatbot
+```
+docker run -u 1000:1000 -it -v "$(pwd)":/app -p "5005:5005" rasa/rasa:3.2.6-full run -m models --enable-api --cors "*" --debug
+```
+
+
 ## Docker commands
 Start the action server (if you used docker stop action-server)
 ```
