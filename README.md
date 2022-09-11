@@ -67,7 +67,10 @@ docker run -u userid:groupid -d --mount src="/c/Users/Firstname.Lastname/Docker/
 ```
 docker run -u 1089705:1049089 -d --mount src="/c/Users/Richard.Torzynski/Docker/rasa/actions/",dst=/app/actions,type=bind --net my-project --name action-server rasa/rasa-sdk:3.2.0
 
-To run as a server
+To run as a server for [Rasa Express Webchat Widget](https://github.com/ecsricktorzynski/rasa-express-webchat-widget.git)
+```
+docker run -u userid:groupid --mount src="/c/Users/Firstname.Lastname/Docker/rasa/",dst=/app,type=bind -p "5005:5005" rasa/rasa:3.2.6-full run -m models --enable-api --cors "*" --debug
+```
 docker run -u 1089705:1049089 --mount src="/c/Users/Richard.Torzynski/Docker/rasa/",dst=/app,type=bind -p "5005:5005" rasa/rasa:3.2.6-full run -m models --enable-api --cors "*" --debug
 
 ## Docker commands
@@ -153,7 +156,7 @@ Create action server for custom actions
 docker run -d -v $(pwd)/actions:/app/actions --net my-project --name action-server rasa/rasa-sdk:3.2.0
 ```
 
-Run Rasa as API for web-chatbot
+To run as a server for [Rasa Express Chatbot Widget](https://github.com/ecsricktorzynski/rasa-express-webchat-widget.git)
 ```
 docker run -u 1000:1000 -it -v "$(pwd)":/app -p "5005:5005" rasa/rasa:3.2.6-full run -m models --enable-api --cors "*" --debug
 ```
