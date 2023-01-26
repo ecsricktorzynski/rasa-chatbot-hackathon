@@ -39,9 +39,20 @@ $ pwd
 
 The **--mount src="/c/Users/Firstname.Lastname/pathtorasa/",dst=/app,type=bind** parameter in the commands binds your local directory to the docker containers path, so docker must run with you as the owner in order for you to be able to write/edit files in this bound directory.  If you don't include this, you will not be able to save changes to any of the files in this directory and the training will also fail.
 
-To setup Rasa for the first time
+## Windows ENV variables
+A number of environmental variables have to be setup for Python to work
 ```
-docker run -u userid:groupid --mount src="/c/Users/Firstname.Lastname/pathtorasa/",dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
+export HTTP_PROXY='http://165.225.222.34:80' 
+export HTTPS_PROXY='http://165.225.222.34:80' 
+``` 
+
+You must also get a Z-Scaler certificate on ECS laptops, which can be found at:
+
+
+
+## To setup Rasa for the first time
+```
+docker run -u userid:groupid --mount src=/c/Users/Firstname.Lastname/pathtorasa/,dst=/app,type=bind rasa/rasa:3.2.6-full init --no-prompt
 ```
 
 To train Rasa 
