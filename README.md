@@ -1,4 +1,4 @@
-# Rasa Chatbot Hackathon
+# Resume Central Rasa Chatbot
 Here are the files for creating the chatbot model.  
 
 ## Using Docker for Rasa
